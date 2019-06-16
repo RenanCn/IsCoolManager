@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IsCoolManager.View.PageCadastrar" Title="Tarefa - Cadastro">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Entry x:Name="txtId" IsVisible="False" IsEnabled="False"/>
+                <!-- Campos de cadastro/alteração -->
+                <Label Text="Nome:"/>
+                <Entry x:Name="txtNome" Placeholder="Matemática"/>
+                <Label Text="Semestre:"/>
+                <Entry x:Name="txtSemestre" Placeholder="3"/>
+                <Label Text="Faltas:"/>
+                <Entry x:Name="txtFaltas" Placeholder="12"/>
+                <Label Text="Limite de Faltas:"/>
+                <Entry x:Name="txtLimiteFaltas" Placeholder="18"/>
+                <Label Text="Meta de Pontos:"/>
+                <Entry x:Name="txtNotaMeta" Placeholder="60"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Andamento:"/>
+                    <Switch x:Name="swAndamento" IsToggled="True" VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <Button x:Name="btCadastrar" Text="Cadastrar" Clicked="BtCadastrar_Clicked" />
+                <Button x:Name="btExcluir" Text="Excluir" Clicked="BtExcluir_Clicked" IsVisible="False"/>
+                <Button x:Name="btCancelar" Text="Cancelar" Clicked="BtCancelar_Clicked"/>
+                <!-- Campos de cadastro/alteração -->
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

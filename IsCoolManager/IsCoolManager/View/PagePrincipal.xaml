@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IsCoolManager.View.PagePrincipal" IsPresented="True">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout>
+                <Image Source="home.png" HorizontalOptions="Center"/>
+                <Label Text="IsCool Manager" FontSize="Large" HorizontalOptions="Center"/>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="home.png" WidthRequest="30" HeightRequest="30" Margin="10"/>
+                    <Button x:Name="btHome"  Text="Home" Clicked="BtHome_Clicked" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="edit.png" WidthRequest="30" HeightRequest="30" Margin="10"/>
+                    <Button x:Name="btCadastrar" Text="Cadastrar Disciplina" Clicked="BtCadastrar_Clicked" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="list.png" WidthRequest="30" HeightRequest="30" Margin="10"/>
+                    <Button x:Name="btListar" Text="Listar Disciplinas" Clicked="BtListar_Clicked" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="edit.png" WidthRequest="30" HeightRequest="30" Margin="10"/>
+                    <Button x:Name="btCadastrarTarefa" Text="Cadastrar Tarefa" Clicked="BtCadastrarTarefa_Clicked" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="list.png" WidthRequest="30" HeightRequest="30" Margin="10"/>
+                    <Button x:Name="btListarTarefas" Text="Listar Tarefas" Clicked="BtListarTarefas_Clicked" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage Title="Page Principal">
+            <Label x:Name="testeDB" Text="Hello World!"/>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

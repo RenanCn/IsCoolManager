@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IsCoolManager.View.PageCadastrarTarefa" Title="Cadastro - Tarefa">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <Entry x:Name="txtIdTarefa" IsVisible="True" IsEnabled="False"/>
+                    <!-- Campos de cadastro/alteração -->
+                    <Label Text="Disciplina:"/>
+                    <Picker x:Name="pckDisciplina" SelectedIndexChanged="PckDisciplina_SelectedIndexChanged">
+                        <Picker.Items>
+                        </Picker.Items>
+                    </Picker>
+                    <Label Text="Descrição:"/>
+                    <Entry x:Name="txtDescricao" Placeholder=""/>
+                    <Label Text="Valor:"/>
+                    <Entry x:Name="txtValor" Placeholder=""/>
+                    <Label Text="Nota:"/>
+                    <Entry x:Name="txtNota" Placeholder=""/>
+                    <Label Text="Data de Entrega:"/>
+                    <DatePicker x:Name="dpData" HorizontalOptions="FillAndExpand"/>
+                    <Label Text="Tipo:"/>
+                    <Picker x:Name="pckTipo" HorizontalOptions="FillAndExpand" Title="Tipo">
+                        <Picker.Items>
+                            <x:String>Prova</x:String>
+                            <x:String>Trabalho</x:String>
+                            <x:String>Seminário</x:String>
+                            <x:String>Atividade</x:String>
+                            <x:String>Outro</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label Text="Prioridade:"/>
+                    <Entry x:Name="txtPrioridade" Placeholder=""/>
+
+                    <Button x:Name="btCadastrarTarefa" Text="Cadastrar" Clicked="BtCadastrarTarefa_Clicked" />
+                    <Button x:Name="btExcluirTarefa" Text="Excluir" Clicked="BtExcluirTarefa_Clicked" IsVisible="False"/>
+                    <Button x:Name="btCancelarTarefa" Text="Cancelar" Clicked="BtCancelarTarefa_Clicked"/>
+                    <!-- Campos de cadastro/alteração -->
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
